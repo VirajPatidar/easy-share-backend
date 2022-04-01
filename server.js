@@ -1,3 +1,7 @@
+// env
+require('dotenv').config();
+
+
 const express = require('express');
 const path = require('path');
 
@@ -11,6 +15,9 @@ connectDB();
 
 // Static Folder
 app.use(express.static('public'));
+
+// Allow JSON in req
+app.use(express.json());
 
 
 // Template Engine
