@@ -12,6 +12,23 @@ const PORT = process.env.PORT || 5000;
 const connectDB = require('./config/db')
 connectDB();
 
+// CORS 
+const cors = require('cors');
+
+const corsOptions = {
+  origin: 'http://localhost:3000'
+}
+
+// Default configuration looks like
+// {
+//     "origin": "*",
+//     "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+//     "preflightContinue": false,
+//     "optionsSuccessStatus": 204
+//   }
+
+app.use(cors(corsOptions))
+
 
 // Static Folder
 app.use(express.static('public'));
