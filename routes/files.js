@@ -42,7 +42,7 @@ async function clean() {
 
 router.post('/', (req, res) => {
 
-    clean().then(process.exit);
+    clean();
 
     // Validate request + Store file
     upload(req, res, async (err) => {
