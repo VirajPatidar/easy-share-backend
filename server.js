@@ -16,7 +16,7 @@ connectDB();
 const cors = require('cors');
 
 const corsOptions = {
-  origin: 'http://localhost:3000'
+  origin: 'https://easy-file-share.netlify.app'
 }
 
 // Default configuration looks like
